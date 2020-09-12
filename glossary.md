@@ -8,7 +8,7 @@
 
 <center>角色排位顺序是从低到高，从左到右。</center>
 
-![slotorder](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cslotorder.png)
+![slotorder.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/slotorder.png?raw=true)
 
 在前面提到的的最终判断，较低的槽位将使单位具有移动的优势和支援的优先权。较高的插槽编号将使该单位在被盟友和敌人作为目标时具有更高的优先级，但同时在进行攻击的优先级上也将更具有优势。
 
@@ -22,9 +22,7 @@
 
 位置优势（？？？）是当AI在地图上进行行动时，在选择位置的的所有情况下的最终判断依据。位置优先级从地图的左下角开始，从最低到最高编号，向右移动，然后回绕到每一行。因此，最高优先级图块位于地图的右上角。
 
-
-
-![tilepriority](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Ctilepriority.png)
+![tilepriority.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/tilepriority.png?raw=true)
 
 <center >Priority Example</center>
 
@@ -40,7 +38,7 @@
 
 米娅到各种敌人的距离计算示例：
 
-![distance](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cdistance.png)
+![distance.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/distance.png?raw=true)
 
 ### d. Movement Order List(移动顺序)
 
@@ -54,13 +52,13 @@
 
 进攻性移动支援是移动支援的一种特殊用法，仅在预战斗期间可用，目前仅涉及推，打，带回和替换。通常情况下，行动支援用于防御，以帮助减少队友的危险。但是，对于进攻性移动支援模式，它试图移动一个队友，以腾出空间让另一个盟友攻击被判断无法攻击到的敌人。这种情况很少见，因为要满足它有很多要求。
 
-![off_move_assist](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Coff_move_assist.gif)
+![off_move_assist.gif](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/off_move_assist.gif?raw=true)
 
 ### b. Bodyblocking
 
 身体阻挡是防御性移动支援的一种特殊方式。它看起来像是正常移动，因为在进行身体阻挡时，身体阻挡者实际上并没有使用其支援技能。但是，身体阻挡者必须装备有防御支援技能，并且能够在目标上使用该技能，只不过身体阻挡是在适用时，代替了支援技能。
 
-![bodyblocking](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cbodyblocking.gif)
+![bodyblocking.gif](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/bodyblocking.gif?raw=true)
 
 身位阻挡的目的是通过封锁至少1个敌方近战单位通往队友的路径，以减少敌人对队友的威胁。几乎可以将其视为交换(Swap)的更具攻击性的版本。
 
@@ -80,7 +78,7 @@
 
 如果一个单位获得了该状态，则保持不动仍然是优先级最低的移动，因此他将尽可能尝试移动。
 
-![shuffling](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cshuffling.gif)
+![shuffling.gif](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/shuffling.gif?raw=true)
 
 该机制的主要目的是减少该单位可能阻止另一个单位进行攻击的机率。这种行为在无武器部队中更可能出现，因为他们更容易站着不动。
 
@@ -114,7 +112,7 @@
 
 假设其他所有条件均相等，则需要远距离传送才能到达的位置优先于标准移动即可以到达的位置。在游戏中，当手动进行移动时，这些格子是浅蓝色的。如果通过远距离传送和使用Pivot均可到达某个格子，则仍将其视为需要传送的图块，并且如果选择了该位置，则将不使用Pivot。
 
-![teleportation](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cteleportation.png)
+![teleportation.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/teleportation.png?raw=true)
 
 <center>触发传送的来源表：</center>
 
@@ -129,7 +127,7 @@
 
 假设其他所有条件均相等，则更接近追杀目标的任何对角线的格子都优先于其他图块的优先级。在目标直接对角线上的格子具有最高优先级。距对角线的距离以绝对距离表示，因此移动类型和障碍物不在考虑范围内。
 
-![diagonal](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cdiagonal.png)
+![diagonal.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/diagonal.png?raw=true)
 
 ### g. Terrain
 
@@ -227,15 +225,15 @@ AoE奥义（e.g. 烈风烈雷等地图炮）在计算公式时仅会计算对主
 
 具有穿越效果的近战单位的距离如预期计算，但是带穿越效果的近战单位的追击回合总是以移动范围为1计算，无论其实际移动范围是多少。
 
-![turnrange_meleeinf](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cturnrange_meleeinf.png)
+![turnrange_meleeinf.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/turnrange_meleeinf.png?raw=true)
 
-![turnrange_meleecav](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cturnrange_meleecav.png)
+![turnrange_meleecav.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/turnrange_meleecav.png?raw=true)
 
 远程单位的计算与近战单位略有不同，因为远程单位会从较远的格子中减去1，并且也忽略了与其目标相邻的特殊地形。
 
 例如，目标目标距远程步兵部队5格，将具有2圈范围，因为5-1 = 4，而4 / [2移动范围]为2追击回合。即使目标前方有山峰，也将以这种方式为远程单位计算追击范围。请注意，虽然目标可以忽略远程单位的相邻地形，但它们仍将沿着他们可以移动的路径移向该单位。
 
-![turnrange_rangedinf](C:%5CUsers%5CPenny%5CDesktop%5CFEH%5CglossaryPics%5Cturnrange_rangedinf.png)
+![turnrange_rangedinf.png](https://github.com/ILikeIneine/FEH-AI-Analysis/blob/master/glossaryPics/turnrange_rangedinf.png?raw=true)
 
 总而言之，该公式表明，目标每多追一个回合，就需要多承受5点伤害才能保持相等的价值。
 
